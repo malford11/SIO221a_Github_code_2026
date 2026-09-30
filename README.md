@@ -61,6 +61,14 @@ same conda environment as above**:
 pip install jupyter-matlab-proxy
 ```
 
+On an **Intel Mac** add a pin, or this step fails with a long Rust compile error —
+see [TROUBLESHOOTING.md](TROUBLESHOOTING.md). (`uname -m` tells you: `x86_64` is
+Intel, `arm64` is Apple Silicon. The setup script above handles this for you.)
+
+```bash
+pip install --only-binary cryptography 'cryptography<49' jupyter-matlab-proxy
+```
+
 That is MathWorks' [official Jupyter integration](https://github.com/mathworks/jupyter-matlab-proxy).
 It registers a kernel called `jupyter_matlab_kernel`, which is what the MATLAB
 notebooks here ask for. Choose **MATLAB Kernel** from the kernel menu.
@@ -81,6 +89,10 @@ Or just use the launcher in this repo, which handles both:
 ```bash
 ~/SIO221a_Github_code_2026/tools/sio221a-lab
 ```
+
+**If setup goes wrong**, read [TROUBLESHOOTING.md](TROUBLESHOOTING.md) before
+improvising a fix. It covers the failures that have actually bitten people on this
+course, including a couple whose error messages point nowhere near the real cause.
 
 ---
 
