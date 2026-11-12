@@ -21,3 +21,4 @@ Class 6 coding exercise
 	*make a plot with three vertical panels: time on each goes from 0 to 2 * pi.  Panel a plots wave 1, panel b plots wave 2, panel c plots the product.
 	*the title shows n, m and out.integral.
 	*verify integral = nonzero (what is the value?) for n=m and 0 for n=m
+	
